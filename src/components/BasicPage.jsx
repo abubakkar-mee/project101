@@ -11,22 +11,10 @@ const BasicPage = () => {
 
   return (
     <div>
-      <Link to="/store">Store</Link>
-      <Link to="/cart">Cart</Link>
-      <button onClick={()=>dispatch(increment())}>add</button>
-      <h1>{count}</h1>
-      <button onClick={()=> dispatch(decrement())}>minus</button>
-
-      <section>
-        <button onClick={()=> dispatch(addTodo(`todo no is ${Math.floor(Math.random() * 100)}`))}>Add Todo</button>
-        {
-          todos.map((todo,index) =>(
-            <h2 key={index}>
-              {todo}
-            </h2>
-          ))
-        }
-      </section>
+      <div className="flex gap-4">
+        <Link className="border p-2" to="/store">Store</Link>
+        <Link className="border p-2" to="/cart">Cart</Link>
+      </div>
     </div>
   )
 }

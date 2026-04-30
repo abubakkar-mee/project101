@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+li {
+    cursor: pointer;
+}
+
+/* global css (index.css / app.css) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+body {
+  background-color: #f2ece1;
+}

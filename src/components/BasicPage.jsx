@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import { increment, decrement } from "../features/counter/counterSlice"
 import { addTodo } from "../features/todo/todoSlice";
+import { Link } from "react-router-dom";
 
 const BasicPage = () => {
 
@@ -10,6 +11,8 @@ const BasicPage = () => {
 
   return (
     <div>
+      <Link to="/store">Store</Link>
+      <Link to="/cart">Cart</Link>
       <button onClick={()=>dispatch(increment())}>add</button>
       <h1>{count}</h1>
       <button onClick={()=> dispatch(decrement())}>minus</button>
